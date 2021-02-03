@@ -1,0 +1,17 @@
+{% extends "menu/base.html" %}
+
+{%  block "body" %}
+Welcome {{ request.user.username }}
+    {% for cat in categories %}
+
+        <h3>{{ cat }}</h3>
+        <ul>
+        {% for item in cat.item_set.all %}
+            <li>
+                {{ item.name }} <span style="font-size: .8em;"><strong>({{ item.price }})</strong></span>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
+{% endblock %}

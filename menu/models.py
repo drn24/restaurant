@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Category(models.Model):
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=60, unique=True)
     ordering = models.IntegerField(default=0, blank=True)
 
     def __str__(self):
@@ -24,5 +24,5 @@ class Item(models.Model):
     ordering = models.IntegerField(default=0, blank=True)
 
     def __str__(self):
-        return f"{self.name}: {self.category}"
+        return f"{self.name}"
 

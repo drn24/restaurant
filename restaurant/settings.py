@@ -25,7 +25,7 @@ SECRET_KEY = 'o@qidst21(etz$liov%w7uo1ev%i)ae=a%j!3wdb$ni41%ip5w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["darren.com"]
+ALLOWED_HOSTS = ["darren.com", "qsites.com", "menu.qsites.com"]
 
 
 # Application definition
